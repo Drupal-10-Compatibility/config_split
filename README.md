@@ -15,3 +15,19 @@ The purpose of this project is to leverage Github Actions to build a Drupal 10 s
 | Static Analysis: | ![Static Analysis](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/static_analysis.yml/badge.svg) | [Static Analysis](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/static_analysis.yml) |
 | Coding Standards: | ![Coding Standards](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/coding_standards.yml/badge.svg) | [Coding Standards](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/coding_standards.yml) |
 | Unit Tests: | ![Unit Tests](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/unit_tests.yml/badge.svg) | [Unit Tests](https://github.com/Drupal-10-Compatibility/config_split/actions/workflows/unit_tests.yml) |
+
+## Working on the project locally with DDEV
+
+1. Execute `ddev start` and `ddev install` to install a working copy of Drupal
+   with this project for unit testing purposes.
+1. That command finishes with `ddev drush uli`, providing you with a one-time
+   login link.
+1. View the status of the installed project at Reports > Upgrade status
+   (`/admin/reports/upgrade-status`).
+1. Use `ddev` to list available commands. Use `ddev cmd --help` or `ddev help
+   cmd` for more information on a specific command. This project defines at
+   least the following custom commands:
+   - `coding-standards`
+   - `install`
+   - `static-analyze`
+   - `unit-tests`
